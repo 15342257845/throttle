@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				width: 100%;
+				height: 1200px;
+			}
+		</style>
+	</head>
+	<body>
+	
+	
+	<p>函数节流：设定一个特殊的时间，让函数在特定的时间里只执行一次，不能频繁执行</p>
+	
+		<script type="text/javascript">
+			
+			let canlog=true;
+			document.body.onscroll=function(){
+				if(canlog){
+					console.log(1);
+					canlog=false;
+					setTimeout(function(){
+						canlog=true
+					},2000)
+						
+					
+				}
+			}
+		</script>
+	</body>
+</html>
